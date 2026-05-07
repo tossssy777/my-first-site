@@ -6,5 +6,13 @@
 </head>
 <body style="background-color: gray;">
   <p>Hello World!</p>
+  <p id="clock" style="font-size: 2em; color: white;"></p>
+  <script>
+    function updateClock() {
+      document.getElementById('clock').textContent = new Date().toLocaleTimeString('ja-JP');
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
 </body>
 </html>
